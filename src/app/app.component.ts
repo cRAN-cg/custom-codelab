@@ -4,6 +4,8 @@ import { BreakpointObserver, Breakpoints, BreakpointState } from '@angular/cdk/l
 import { Observable, Subscriber, from, Observer } from 'rxjs';
 import { MenuItem, Message } from 'primeng/api';
 import { MatStepper, MatVerticalStepper } from '@angular/material';
+import {trigger,state,style,transition,animate} from '@angular/animations';
+
 
 @Component({
   selector: 'app-root',
@@ -11,14 +13,27 @@ import { MatStepper, MatVerticalStepper } from '@angular/material';
   styleUrls: [
     './app.component.css',
   ],
+  animations: [
+    trigger('overlayState', [
+        state('hidden', style({
+            opacity: 0
+        })),
+        state('visible', style({
+            opacity: 1
+        })),
+        transition('visible => hidden', animate('400ms ease-in')),
+        transition('hidden => visible', animate('400ms ease-out'))
+    ])]
+
 })
 export class AppComponent implements OnInit {
+  menuActive: boolean;
   title = 'custom-codelab';
   mode = new FormControl('over');
   visibleSidebar: boolean = true;
   showMenu: boolean = true;
   slides: Object[] = [];
-  showSidebar: boolean = true;
+  showSidebar: boolean = false;
   layoutChanges: Observable<BreakpointState>;
   activeIndex: number = 0;
   @ViewChild('stepper') stepper: MatVerticalStepper;
@@ -36,6 +51,9 @@ export class AppComponent implements OnInit {
         this.showSidebar = this.visibleSidebar;
       }
     );
+    this.stepper.selectionChange.subscribe(
+      data => console.log(data)
+    );
     this.slides.push(
       {'name':'Doggo', id : '0'},
       {'name':'Mocha', id : '1'},
@@ -43,7 +61,7 @@ export class AppComponent implements OnInit {
   }
 
   onMenuClick(event: Event): void {
-    this.showSidebar = !this.showSidebar;
+    this.menuActive = !this.menuActive;
     event.preventDefault();
   }
 
