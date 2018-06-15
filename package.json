@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "dev": "ng build --prod --base-href 'https://cran-cg.github.io/custom-codelab/' && ngh --no-silent ngh --dir dist/custom-codelab && ng serve"
+    "dev": "ng build --prod --base-href=/custom-codelab/ && ngh --dir dist/custom-codelab  && ng serve"
   },
   "private": true,
   "dependencies": {
