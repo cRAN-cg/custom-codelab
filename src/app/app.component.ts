@@ -11,6 +11,9 @@ import {trigger,state,style,transition,animate} from '@angular/animations';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: [
+    "../../node_modules/primeng/resources/themes/omega/theme.css",
+    "../../node_modules/primeng/resources/primeng.min.css",
+    "../../node_modules/primeicons/primeicons.css",
     './app.component.css',
   ],
   animations: [
@@ -66,7 +69,6 @@ export class AppComponent implements OnInit {
   }
 
   move(index: number) {
-    debugger;
     if(index >= this.slides.length) {
       index = 0;
       this.stepper.reset();
