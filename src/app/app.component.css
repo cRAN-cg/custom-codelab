@@ -120,21 +120,21 @@ box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
   box-sizing: border-box;
   display: flex;
   bottom: 1em;
-  width: 75%;
+  width: calc(100% - 260px);
   flex-direction: row;
   justify-content: space-between;
 }
 
 #right-button {
   font-weight: 600;
-  margin-right: 20px;
+  margin-right: 70px;
   background: #1A73E8;
   color: #FFFFFF;
 }
 
 #left-button {  
   font-weight: 600;
-  margin-left: 20px;
+  margin-left: 55px;
   background: #FFFFFF;
   color: #1A73E8;
 }
@@ -178,17 +178,25 @@ box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
 
   #layout-content {
       margin-left: 0;
-      padding-top: 100px;
+      padding-top: 50px;
   }
 
   #footer {
     width: 100%;
   }
+
+  #right-button {
+    margin-right: 30px;
+  }
+
+  #left-button {
+    margin-left: 15px;
+  }
 }
 
 @media (max-width: 768px) {
   #footer {
-    width: 94%;
+    width: 100%;
   }
 
 }

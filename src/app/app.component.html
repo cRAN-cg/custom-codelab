@@ -11,12 +11,6 @@
       <mat-step *ngFor="let slide of slides" [optional]="true">
         <ng-template matStepLabel>{{slide.id}}</ng-template>
       </mat-step>
-      <!-- <mat-step [optional]="true">
-        <ng-template matStepLabel>Second Slide</ng-template>
-      </mat-step>
-      <mat-step [optional]="true">
-          <ng-template matStepLabel>Third Slide</ng-template>
-      </mat-step> -->
     </mat-vertical-stepper>
   </div>
   <div class="layout-mask" *ngIf="menuActive"></div>
@@ -44,10 +38,10 @@
     <div ui-g>
         <div id="footer">
           <div>
-            <button  class = "nav-bar" id="left-button" mat-raised-button [ngStyle]="{'display': stepper.selectedIndex ? '' : 'none'}" (click)="move((activeIndex - 1))">Back</button>
+            <button id="left-button" mat-raised-button [ngStyle]="{'display': stepper.selectedIndex ? '' : 'none'}" (click)="move((activeIndex - 1))">Back</button>
           </div>
           <div>
-            <button  class = "nav-bar" id="right-button" mat-raised-button (click)="move(activeIndex + 1)">Next</button>
+            <button id="right-button" mat-raised-button (click)="move(activeIndex + 1)">Next</button>
           </div>
         </div>
       </div>
