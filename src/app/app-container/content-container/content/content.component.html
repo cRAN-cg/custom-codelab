@@ -1,0 +1,22 @@
+<div class="ui-g-12">
+  <div *ngFor="let slide of slides">
+    <div class="fade" id="{{slide.stepNumber}}" [ngStyle]="{'display': slide.show ? 'block' : 'none' }">
+      <mat-card class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>{{slide.title}}</mat-card-title>
+          <!--<mat-card-subtitle>{{stepper.selectedIndex}}</mat-card-subtitle>-->
+        </mat-card-header>
+        <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+        <mat-card-content>
+          <p>
+            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small,
+            agile dog that copes
+            very well with mountainous terrain, the Shiba Inu was originally bred for hunting.
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>
+

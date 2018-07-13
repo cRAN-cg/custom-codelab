@@ -1,0 +1,20 @@
+
+#right-button {
+  font-weight: 600;
+  margin-right: 70px;
+  background: #1A73E8;
+  color: #FFFFFF;
+}
+
+#left-button {
+  font-weight: 600;
+  margin-left: 55px;
+  background: #FFFFFF;
+  color: #1A73E8;
+}
+
+#controls {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

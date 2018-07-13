@@ -1,0 +1,6 @@
+#footer {
+  position: fixed;
+  box-sizing: border-box;
+  bottom: 1em;
+  width: calc(100% - 260px);
+}

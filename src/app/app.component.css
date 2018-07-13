@@ -7,12 +7,12 @@
 }
 
 @-webkit-keyframes fade {
-  from {opacity: .4} 
+  from {opacity: .4}
   to {opacity: 1}
 }
 
 @keyframes fade {
-  from {opacity: .4} 
+  from {opacity: .4}
   to {opacity: 1}
 }
 
@@ -31,55 +31,6 @@ body {
   color: #404C51;
   -webkit-font-smoothing: antialiased;
   font-size: 1em;
-}
-
-#layout-topbar {
-  background-color: #1a73e8;
-  box-sizing: border-box;
-  display: block;
-  padding: 0;
-  height: 70px;
-  box-sizing: border-box;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 9997;
-  -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
-  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
-}
-
-/* Sidebar */
-#layout-sidebar {
-  position: fixed;
-  left: 0;
-  top: 70px;
-  height: calc(100% - 70px);
-  background-color: #ffffff;
-  overflow-x: hidden;
-  overflow-y: auto;
-  width: 260px;
-	-moz-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
-	-webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
-	box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
-}
-
-#layout-content {
-  margin-left: 260px;
-  background-color: #ffffff;
-}
-
-.layout-mask {
-  z-index: 9998;
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 100px;
-  left: 0;
-  display: none;
-  background-color: #4c5254;
-  opacity: .7;
 }
 
 #layout-topbar .menu-button {
@@ -105,39 +56,7 @@ box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
   line-height: inherit;
 }
 
-.example-card {
-  margin: 10%;
-}
 
-.example-header-image {
-  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
-  background-size: cover;
-}
-
-
-#footer {
-  position: fixed;
-  box-sizing: border-box;
-  display: flex;
-  bottom: 1em;
-  width: calc(100% - 260px);
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-#right-button {
-  font-weight: 600;
-  margin-right: 70px;
-  background: #1A73E8;
-  color: #FFFFFF;
-}
-
-#left-button {  
-  font-weight: 600;
-  margin-left: 55px;
-  background: #FFFFFF;
-  color: #1A73E8;
-}
 
 @media screen and (max-width: 64em) {
   .layout-mask {

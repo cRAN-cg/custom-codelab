@@ -1,0 +1,8 @@
+<div ui-g id="controls">
+    <div>
+      <button id="left-button" mat-raised-button [ngStyle]="{'display': activeIndex ? '' : 'none'}" (click)="move((activeIndex - 1))">Back</button>
+    </div>
+    <div>
+      <button id="right-button" mat-raised-button (click)="move(activeIndex + 1)">Next</button>
+    </div>
+</div>
