@@ -1,4 +1,4 @@
-# CustomCodelab
+# CustomCodelab [![Build Status](https://travis-ci.com/cRAN-cg/custom-codelab.svg?branch=master)](https://travis-ci.com/cRAN-cg/custom-codelab)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.0-beta.0.
 
