@@ -33,3 +33,12 @@
   margin-bottom: 32px;
   border-radius: 4px;
 }
+
+#title {
+  font-family: "Source Sans Pro", "Segoe UI", Helvetica, Arial, sans-serif, "Segoe UI Symbol";
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1em;
+  margin: 0 0 30px;
+  font-style: normal;
+}

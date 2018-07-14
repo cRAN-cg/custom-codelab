@@ -1,0 +1,9 @@
+#metadata {
+  color: #777;
+  font-size: 0.7em;
+  flex: 0 0 80px;
+}
+
+.feedback {
+  color: currentColor;
+}

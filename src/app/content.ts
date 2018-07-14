@@ -1,3 +1,3 @@
 export interface Content {
-  instructions?: string;
+  instructions?: any;
 }

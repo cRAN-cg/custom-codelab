@@ -1,3 +1,21 @@
 #drawer-content-wrapper {
   padding: 10px;
 }
+/* Sidebar */
+#layout-sidebar {
+  z-index: 9997;
+  position: fixed;
+  left: 0;
+  top: 0px;
+  height: calc(100%);
+  background-color: #ffffff;
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 256px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
+}
+
+#sidebar-content-wrapper {
+  padding: 16px;
+  border-right: 1px solid #DADCE0;
+}
