@@ -12,4 +12,7 @@ export class ToolbarComponent implements OnInit {
   ngOnInit() {
   }
 
+  toReturnToHomepage(event: any): void {
+    console.log('Hi returning home');
+  }
 }

@@ -1,9 +1,8 @@
-<div id="layout-sidebar" [ngClass]="{'active': menuActive}">
-    <div id="sidebar-content-wrapper">
+
+
       <mat-vertical-stepper #stepper style="color: #1a73e8">
         <mat-step *ngFor="let slide of slides" [optional]="true">
           <ng-template matStepLabel>{{slide.stepNumber}}</ng-template>
         </mat-step>
       </mat-vertical-stepper>
-    </div>
-  </div>
+

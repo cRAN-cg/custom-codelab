@@ -9,4 +9,41 @@
   padding: 0 16px;
 }
 
+.title {
+  line-height: 24px;
+  margin: 0 8px;
+  flex: 1;
+  font-family: 'Source Sans Pro', Arial, sans-serif;
+  white-space: nowrap;
+  font-style: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
+.icon{
+  display: inline-block;
+  position: relative;
+  padding: 8px;
+  outline: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  z-index: 0;
+  line-height: 1;
+  width: 40px;
+  height: 40px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box !important;
+}
+
+.countdown {
+  display: flex;
+  flex-direction: row;
+}
+
+.schedule-icon {
+  margin-right: 3px;
+}
