@@ -18,6 +18,8 @@ import { ContentComponent } from './app-container/content-container/content/cont
 import { ContentMaskComponent } from './app-container/content-container/content-mask/content-mask.component';
 import { ControlsComponent } from './app-container/content-container/footer/controls/controls.component';
 import {NavigationService} from './navigation.service';
+import { CodelabStepComponent } from './app-container/content-container/content/codelab-step/codelab-step.component';
+import { ToolbarComponent } from './app-container/content-container/header/toolbar/toolbar.component';
 
 
 @NgModule({
@@ -33,6 +35,8 @@ import {NavigationService} from './navigation.service';
     ContentComponent,
     ContentMaskComponent,
     ControlsComponent,
+    CodelabStepComponent,
+    ToolbarComponent,
   ],
   imports: [
     BrowserAnimationsModule,

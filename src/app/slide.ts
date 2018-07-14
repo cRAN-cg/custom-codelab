@@ -1,8 +1,11 @@
+import {Content} from './content';
+
+
 export interface Slide {
   timeRemaining?: number;
   stepNumber?: number;
   title?: string;
-  content?: any;
+  content?: Content;
   isLast?: boolean;
   isFirst?: boolean;
   show?: boolean;
