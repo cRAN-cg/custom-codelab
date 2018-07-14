@@ -21,10 +21,12 @@ script:
   - ng build --prod
 
 
-#deploy:
-#  provider: pages
-#  skip-cleanup: true
-#  github-token: $GITHUB_TOKEN
-#  keep-history: true
-#  local-dir: ./dist/
-#  on:
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  keep-history: true
+  local-dir: ./dist/custom-codelab
+  on:
+    branch: master
+
