@@ -1,2 +1,10 @@
-<app-content-container [slides]="slides"></app-content-container>
-<app-drawer-container [slides]="slides"></app-drawer-container>
+<app-content-container [slides]="slides" 
+[ngClass]="{'content-handset': layoutMode.HANDSET,
+            'content-web' : layoutMode.WEB}"
+            (swiperight)="sideNaveDrawerOpen($event)">
+</app-content-container>
+<app-drawer-container [slides]="slides" 
+[ngClass]="{'drawer-handset' : layoutMode.HANDSET,
+            'drawer-web' : layoutMode.WEB,
+            'opened': (showSideNavDrawer && layoutMode.HANDSET)}"
+            (swipeleft)="sideNavDrawerClose($event)"></app-drawer-container>

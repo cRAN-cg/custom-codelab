@@ -1,0 +1,55 @@
+/* Sidebar */
+.drawer-web {
+    z-index: 9997;
+    position: fixed;
+    left: 0;
+    top: 0px;
+    height: calc(100%);
+    background-color: #ffffff;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 256px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
+  }
+
+.drawer-handset {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 256px;
+    transition-property: -webkit-transform;
+    transition-property: transform;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    background-color: #FFF;
+    background: #FFFFFF;
+}
+
+
+.content-handset {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.opened {
+    visibility: visible;
+    transform: translate3d(0, 0, 0);
+    transition-duration: 200ms;
+}
+
+.content-web {
+    margin-left: 256px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+  }

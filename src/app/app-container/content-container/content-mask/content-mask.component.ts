@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavigationService } from '../../../services/navigation.service';
 
 @Component({
   selector: 'app-content-mask',
@@ -8,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 export class ContentMaskComponent implements OnInit {
   menuActive: false;
 
-  constructor() { }
+  constructor(private navigationService: NavigationService) { }
 
   ngOnInit() {
   }
 
+  sideNavDrawerClose(event: any): void {
+    this.navigationService.sideNavDrawerIsClicked(false);
+  }
 }

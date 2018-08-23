@@ -1,12 +1,15 @@
 import {Component, OnDestroy, OnInit, ViewChild} from '@angular/core';
-import {FormControl} from '@angular/forms';
-import {BreakpointObserver, Breakpoints, BreakpointState} from '@angular/cdk/layout';
-import {Observable, Subscriber, from, Observer} from 'rxjs';
-import {MenuItem, Message} from 'primeng/api';
-import {MatStepper, MatVerticalStepper} from '@angular/material';
+import {BreakpointState} from '@angular/cdk/layout';
+import {Observable} from 'rxjs';
+import {MatVerticalStepper} from '@angular/material';
 import {trigger, state, style, transition, animate} from '@angular/animations';
 import { LayoutService } from './services/layout.service';
+import { Slide } from './model-classes/slide';
 
+export interface LayoutMode {
+  HANDSET: boolean;
+  WEB: boolean;
+}
 
 @Component({
   selector: 'app-root',
@@ -24,14 +27,14 @@ import { LayoutService } from './services/layout.service';
       transition('visible => hidden', animate('400ms ease-in')),
       transition('hidden => visible', animate('400ms ease-out'))
     ])]
-
 })
 export class AppComponent implements OnInit, OnDestroy {
   @ViewChild('stepper') stepper: MatVerticalStepper;
+
   private layoutChanges: Observable<BreakpointState>;
-  title = 'custom-codelab';
-  visibleSidebar = true;
-  slides: Object[] = [];
+
+  slides: Slide[];
+  layoutMode: LayoutMode;
 
   constructor(private layoutChangeService: LayoutService) {
   }
@@ -39,7 +42,9 @@ export class AppComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.layoutChangeService.layoutChanges.subscribe(
       result => {
-        console.log(result);
+        this.layoutMode = {
+          'HANDSET': result.matches,
+          'WEB': !result.matches };
       }
     );
   }
