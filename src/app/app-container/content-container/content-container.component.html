@@ -1,7 +1,5 @@
-<div id="layout-content">
 
 <app-header></app-header>
 <app-content [slides]="slides"></app-content>
-<app-content-mask></app-content-mask>
+<app-content-mask *ngIf="showOverlay"></app-content-mask>
 <app-footer [slides]="slides"></app-footer>
-</div>

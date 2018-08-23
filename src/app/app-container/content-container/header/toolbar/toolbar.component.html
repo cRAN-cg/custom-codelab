@@ -1,8 +1,13 @@
 <div class="main-toolbar">
   <div class="icon">
-    <span (click)="toReturnToHomepage($event)">
+    <span (click)="toReturnToHomepage($event)" *ngIf="layoutMode.WEB">
       <i class="material-icons">
         arrow_back
+      </i>
+    </span>
+    <span (click)="showDrawer($event)" *ngIf="layoutMode.HANDSET">
+      <i class="material-icons">
+        list
       </i>
     </span>
   </div>

@@ -1,20 +1,20 @@
 import {Component, OnDestroy, OnInit, ViewChild} from '@angular/core';
-import {FormControl} from '@angular/forms';
-import {BreakpointObserver, Breakpoints, BreakpointState} from '@angular/cdk/layout';
-import {Observable, Subscriber, from, Observer} from 'rxjs';
-import {MenuItem, Message} from 'primeng/api';
-import {MatStepper, MatVerticalStepper} from '@angular/material';
+import {BreakpointState} from '@angular/cdk/layout';
+import {Observable} from 'rxjs';
+import {MatVerticalStepper} from '@angular/material';
 import {trigger, state, style, transition, animate} from '@angular/animations';
+import { LayoutService } from './services/layout.service';
+import { Slide } from './model-classes/slide';
 
+export interface LayoutMode {
+  HANDSET: boolean;
+  WEB: boolean;
+}
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: [
-    '../../node_modules/primeng/resources/themes/omega/theme.css',
-    '../../node_modules/primeng/resources/primeng.min.css',
-    '../../node_modules/primeicons/primeicons.css',
-    './app.component.css',
   ],
   animations: [
     trigger('overlayState', [
@@ -27,31 +27,24 @@ import {trigger, state, style, transition, animate} from '@angular/animations';
       transition('visible => hidden', animate('400ms ease-in')),
       transition('hidden => visible', animate('400ms ease-out'))
     ])]
-
 })
 export class AppComponent implements OnInit, OnDestroy {
-  menuActive: boolean;
-  title = 'custom-codelab';
-  mode = new FormControl('over');
-  visibleSidebar = true;
-  showMenu = true;
-  slides: Object[] = [];
-  showSidebar = false;
-  layoutChanges: Observable<BreakpointState>;
-  activeIndex = 0;
   @ViewChild('stepper') stepper: MatVerticalStepper;
 
-  constructor(breakpointObserver: BreakpointObserver) {
-    this.layoutChanges = breakpointObserver.observe([
-      Breakpoints.Web
-    ]);
+  private layoutChanges: Observable<BreakpointState>;
+
+  slides: Slide[];
+  layoutMode: LayoutMode;
+
+  constructor(private layoutChangeService: LayoutService) {
   }
 
   ngOnInit() {
-    this.layoutChanges.subscribe(
+    this.layoutChangeService.layoutChanges.subscribe(
       result => {
-        this.visibleSidebar = result.matches ? true : false;
-        this.showSidebar = this.visibleSidebar;
+        this.layoutMode = {
+          'HANDSET': result.matches,
+          'WEB': !result.matches };
       }
     );
   }
