@@ -5,6 +5,7 @@ import {Observable, Subscriber, from, Observer} from 'rxjs';
 import {MenuItem, Message} from 'primeng/api';
 import {MatStepper, MatVerticalStepper} from '@angular/material';
 import {trigger, state, style, transition, animate} from '@angular/animations';
+import { LayoutService } from './services/layout.service';
 
 
 @Component({
@@ -32,16 +33,13 @@ export class AppComponent implements OnInit, OnDestroy {
   visibleSidebar = true;
   slides: Object[] = [];
 
-  constructor(breakpointObserver: BreakpointObserver) {
-    this.layoutChanges = breakpointObserver.observe([
-      Breakpoints.Handset
-    ]);
+  constructor(private layoutChangeService: LayoutService) {
   }
 
   ngOnInit() {
-    this.layoutChanges.subscribe(
+    this.layoutChangeService.layoutChanges.subscribe(
       result => {
-        this.visibleSidebar = result.matches;
+        console.log(result);
       }
     );
   }

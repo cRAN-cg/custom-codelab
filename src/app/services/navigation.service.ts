@@ -6,6 +6,7 @@ import {Subject} from 'rxjs';
 })
 export class NavigationService {
 
+  constructor() { }
   // Observable number sources
   private controlButtonClickedSource = new Subject<number>();
   private stepperComponentClickedSource = new Subject<number>();
@@ -21,5 +22,4 @@ export class NavigationService {
   stepperIsSelectedWithStepNumber(stepNumber: number) {
     this.stepperComponentClickedSource.next(stepNumber);
   }
-  constructor() { }
 }
