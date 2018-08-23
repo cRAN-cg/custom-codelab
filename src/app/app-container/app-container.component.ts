@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {Slide} from '../slide';
+import {Slide} from '../model-classes/slide';
 
 export const INITIAL_VALUE_OF_INDEX = 0;
 @Component({

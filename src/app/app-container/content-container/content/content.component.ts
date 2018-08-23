@@ -1,6 +1,6 @@
 import {Component, Input, OnDestroy, OnInit} from '@angular/core';
-import {Slide} from '../../../slide';
-import {NavigationService} from '../../../navigation.service';
+import {Slide} from '../../../model-classes/slide';
+import {NavigationService} from '../../../services/navigation.service';
 import {Subscription} from 'rxjs';
 
 @Component({

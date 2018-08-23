@@ -1,8 +1,8 @@
 import {
   Component, EventEmitter, Input, OnDestroy, OnInit, Output
 } from '@angular/core';
-import {NavigationService} from '../../../../navigation.service';
-import {Slide} from '../../../../slide';
+import {NavigationService} from '../../../../services/navigation.service';
+import {Slide} from '../../../../model-classes/slide';
 import {INITIAL_VALUE_OF_INDEX} from '../../../app-container.component';
 
 

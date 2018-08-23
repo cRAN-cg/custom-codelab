@@ -11,10 +11,6 @@ import {trigger, state, style, transition, animate} from '@angular/animations';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: [
-    '../../node_modules/primeng/resources/themes/omega/theme.css',
-    '../../node_modules/primeng/resources/primeng.min.css',
-    '../../node_modules/primeicons/primeicons.css',
-    './app.component.css',
   ],
   animations: [
     trigger('overlayState', [
@@ -30,28 +26,22 @@ import {trigger, state, style, transition, animate} from '@angular/animations';
 
 })
 export class AppComponent implements OnInit, OnDestroy {
-  menuActive: boolean;
-  title = 'custom-codelab';
-  mode = new FormControl('over');
-  visibleSidebar = true;
-  showMenu = true;
-  slides: Object[] = [];
-  showSidebar = false;
-  layoutChanges: Observable<BreakpointState>;
-  activeIndex = 0;
   @ViewChild('stepper') stepper: MatVerticalStepper;
+  private layoutChanges: Observable<BreakpointState>;
+  title = 'custom-codelab';
+  visibleSidebar = true;
+  slides: Object[] = [];
 
   constructor(breakpointObserver: BreakpointObserver) {
     this.layoutChanges = breakpointObserver.observe([
-      Breakpoints.Web
+      Breakpoints.Handset
     ]);
   }
 
   ngOnInit() {
     this.layoutChanges.subscribe(
       result => {
-        this.visibleSidebar = result.matches ? true : false;
-        this.showSidebar = this.visibleSidebar;
+        this.visibleSidebar = result.matches;
       }
     );
   }

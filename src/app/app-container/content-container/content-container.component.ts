@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Slide} from '../../slide';
+import {Slide} from '../../model-classes/slide';
 
 @Component({
   selector: 'app-content-container',

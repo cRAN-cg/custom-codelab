@@ -17,7 +17,7 @@ import { MetadataComponent } from './app-container/drawer-container/metadata/met
 import { ContentComponent } from './app-container/content-container/content/content.component';
 import { ContentMaskComponent } from './app-container/content-container/content-mask/content-mask.component';
 import { ControlsComponent } from './app-container/content-container/footer/controls/controls.component';
-import {NavigationService} from './navigation.service';
+import {NavigationService} from './services/navigation.service';
 import { CodelabStepComponent } from './app-container/content-container/content/codelab-step/codelab-step.component';
 import { ToolbarComponent } from './app-container/content-container/header/toolbar/toolbar.component';
 

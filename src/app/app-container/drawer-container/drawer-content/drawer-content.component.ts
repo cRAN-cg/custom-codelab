@@ -1,7 +1,7 @@
 import {Component, Input, OnDestroy, OnInit, ViewChild} from '@angular/core';
 import {MatVerticalStepper} from '@angular/material';
-import {NavigationService} from '../../../navigation.service';
-import {Slide} from '../../../slide';
+import {NavigationService} from '../../../services/navigation.service';
+import {Slide} from '../../../model-classes/slide';
 
 @Component({
   selector: 'app-drawer-content',
