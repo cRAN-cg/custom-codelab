@@ -1,6 +1,12 @@
 #footer {
   position: fixed;
   box-sizing: border-box;
-  bottom: 1em;
+  bottom: 2em;
   width: calc(100% - 260px);
+  margin: 0 auto;
+}
+
+.footer-handset {
+  width: 100% !important;
+  bottom: 1em !important;
 }
