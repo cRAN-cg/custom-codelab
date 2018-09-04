@@ -9,5 +9,5 @@
   transform: translateZ(0);
   background: rgba(0, 0, 0, 0.5);
   opacity: 1;
-  touch-action: pan-y;
+  transition-duration: 200ms;
 }

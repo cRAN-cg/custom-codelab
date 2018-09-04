@@ -7,7 +7,7 @@ import { NavigationService } from '../../../services/navigation.service';
   styleUrls: ['./content-mask.component.css']
 })
 export class ContentMaskComponent implements OnInit {
-  menuActive: false;
+  menuActive: boolean;
 
   constructor(private navigationService: NavigationService) { }
 
