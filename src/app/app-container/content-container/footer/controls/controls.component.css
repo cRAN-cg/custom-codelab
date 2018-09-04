@@ -1,20 +1,25 @@
 
 #right-button {
   font-weight: 600;
-  margin-right: 70px;
   background: #1A73E8;
   color: #FFFFFF;
+  border-radius: 4px;
 }
 
 #left-button {
+  border-radius: 4px;
   font-weight: 600;
-  margin-left: 55px;
   background: #FFFFFF;
   color: #1A73E8;
+  transition: transform 300ms ease-in-out;
 }
 
 #controls {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  max-width: calc(800px + 250px);
+  margin: 0 auto;
+  line-height: 24px;
+  padding: 0 5px 0 5px;
 }
